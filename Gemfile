@@ -62,3 +62,12 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "faker", "~> 2.19"
+
+gem "chartkick", "~> 4.0"
+
+gem "groupdate", "~> 5.2"
+
+gem 'jquery-rails'
+
+gem "bootstrap", "~> 4.6.0"
+
