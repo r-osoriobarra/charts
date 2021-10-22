@@ -1,52 +1,52 @@
 <h1 class="mt-2 font-weight-bold">Kofi Sales Charts</h1>
-<p>(click on every title to see the charts)</p>
+<p>(click on every section to show/hide charts)</p>
 
 <div class="row container">
-    <div class="col-md-12" id="montlySales">
+    <div class="col-md-12 title" id="montlySales">
         <h3>Montly Sales</h3>
     </div>
 
-    <div id="montly_sales_12" class="col-md-12 graph">
+    <div id="montly_sales_12" class="col-md-12 graph montly_sales">
         <h4>Last 12 months </h4>
         <%= line_chart @montly_sales_12, colors: ["#109618"]  %>
     </div>
 
-    <div id="montly_sales_amount_12" class="col-md-6 graph">
+    <div id="montly_sales_amount_12" class="col-md-6 graph montly_sales">
         <h4>Sales amount - Last 12 months </h4>
-        <%= column_chart @montly_sales_amount_12 %>
+        <%= column_chart @montly_sales_amount_12, colors: ["#870090"] %> 
     </div>
 
-    <div id="montly_avg_sales_12" class="col-md-6 graph">
+    <div id="montly_avg_sales_12" class="col-md-6 graph montly_sales">
         <h4>Average sales - Last 12 months </h4>
-        <%= bar_chart @montly_avg_sales_12, colors: ["#109618"] %>
+        <%= bar_chart @montly_avg_sales_12, colors: ["#F7A201"] %>
     </div>
 </div>
 
 <div class="by_origin">
 
     <div class="row container">
-        <div class="col-md-12" id="montlySalesOrigin">
+        <div class="col-md-12 title" id="montlySalesOrigin">
             <h3>Montly Sales amount by Kofi <span>origin</span></h3>
         </div>
 
-        <div id="sales_amount_kofi_origin_12" class="col-md-6 graph">
+        <div id="sales_amount_kofi_origin_12" class="col-md-6 graph montly_origin">
             <h4>Last 12 months </h4>
             <%= pie_chart @sales_amount_kofi_origin_12 %>
         </div>
 
-        <div id="sales_amount_kofi_origin_6" class="col-md-6 graph">
+        <div id="sales_amount_kofi_origin_6" class="col-md-6 graph montly_origin">
             <h4>Last 6 months </h4>
             <%= pie_chart @sales_amount_kofi_origin_6 %>
         </div>
     </div>
 
     <div class="row container">
-        <div id="sales_amount_kofi_origin_6" class="col-md-6 graph">
+        <div id="sales_amount_kofi_origin_6" class="col-md-6 graph montly_origin">
             <h4>Last 3 months </h4>
             <%= pie_chart @sales_amount_kofi_origin_3 %>
         </div>
 
-        <div id="sales_amount_kofi_origin_6" class="col-md-6 graph">
+        <div id="sales_amount_kofi_origin_6" class="col-md-6 graph montly_origin">
             <h4>Last 1 month </h4>
             <%= pie_chart @sales_amount_kofi_origin_1 %>
         </div>
@@ -56,33 +56,35 @@
 <div class="by_blend">
 
     <div class="row container">
-        <div class="col-md-12" id="montlySalesBlend">
+        <div class="col-md-12 title" id="montlySalesBlend">
             <h3>Montly Sales amount by Kofi <span>blend</span></h3>
         </div>
 
-        <div id="sales_amount_kofi_blend_12" class="col-md-6 graph">
+        <div id="sales_amount_kofi_blend_12" class="col-md-6 graph montly_blend">
             <h4>Last 12 months </h4>
             <%= pie_chart @sales_amount_kofi_blend_12 %>
         </div>
 
-        <div id="sales_amount_kofi_blend_6" class="col-md-6 graph">
+        <div id="sales_amount_kofi_blend_6" class="col-md-6 graph montly_blend">
             <h4>Last 6 months </h4>
             <%= pie_chart @sales_amount_kofi_blend_6 %>
         </div>
     </div>
 
     <div class="row container">
-        <div id="sales_amount_kofi_blend_6" class="col-md-6 graph">
+        <div id="sales_amount_kofi_blend_6" class="col-md-6 graph montly_blend">
             <h4>Last 3 months </h4>
             <%= pie_chart @sales_amount_kofi_blend_3 %>
         </div>
 
-        <div id="sales_amount_kofi_blend_6" class="col-md-6 graph">
+        <div id="sales_amount_kofi_blend_6" class="col-md-6 graph montly_blend">
             <h4>Last 1 month </h4>
             <%= pie_chart @sales_amount_kofi_blend_1 %>
         </div>
     </div>
 </div>
+
+<script src="script.js"></script>
 
 
 
